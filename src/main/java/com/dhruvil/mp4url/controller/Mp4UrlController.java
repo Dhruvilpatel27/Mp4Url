@@ -43,6 +43,15 @@ public class Mp4UrlController {
         }
     }
 
+    private boolean isValidUrl(String url) {
+        try {
+            new URL(url);
+            return true;
+        } catch (IOException e) {
+            return false;
+        }
+    }
+
 
 }
 
