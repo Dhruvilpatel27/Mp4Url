@@ -61,11 +61,11 @@ public class Mp4UrlController {
         File file = new File(filePath);
         InputStream is = new FileInputStream(file);
 
-        // Check if the file has the MP4 file signature (first 8 bytes)
+       //  Check if the file has the MP4 file signature (first 8 bytes)
 //        byte[] signatureBytes = new byte[8];
 //        is.read(signatureBytes);
 //        String signature = new String(signatureBytes);
-
+//
 //        if (!signature.equals(".mp4")) {
 //            is.close();
 //            throw new IllegalArgumentException("The provided file is not an MP4 file");
