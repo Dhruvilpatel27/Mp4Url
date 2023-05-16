@@ -1,7 +1,7 @@
 ## SpringBoot Application
-Spring Boot-based application with controller and Project reactor  to introduce non-blocking and reactive capabilities to the application for feasibility
+Spring Boot-based application with controller for parsing mp4 files and Integrated with Project reactor to introduce non-blocking and reactive capabilities to the application for feasibility
 
-Required: JDK, Any IDE,  Spring Dependencies -1)Spring Web, 2) Spring Boot Dev Tools
+Required: JDK, Any IDE,  Spring Dependencies -1)Spring Web 2) Spring Boot Dev Tools
 
 ### Program Logic :
 1. The client makes an HTTP GET request to the /analyze endpoint with a URL parameter specifying the MP4 file URL and then analyzeMP4 method is invoked.
@@ -14,7 +14,10 @@ Required: JDK, Any IDE,  Spring Dependencies -1)Spring Web, 2) Spring Boot Dev T
 ## How to Run
 1) Use POSTMAN, With GET and specify the URL by
 --> http://localhost:8080/analyze?url=https://demo.castlabs.com/tmp/text0.mp4
+    
+    
 or any other URL to be diagnosed some open source sample for mp4
+    
 https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4
 https://storage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4
 
@@ -30,13 +33,15 @@ curl -X GET "http://localhost:8080/analyze?url=http://demo.castlabs.com/tmp/text
 
 ### Assumptions and more:
 for the exercise this box types are considered and there size and type are returned after parsing
-MOOF, MFHD, TRAF, TFHD,TRUN,UUID,UUID,MDAT
+MOOF, MFHD, TRAF, TFHD,TRUN,UUID,UUID,MDAT.
 
-● The box types MOOF and TRAF only contain other boxes.
+● The box types MOOF and TRAF only contain other boxes, All other boxes contain payload and do not contain other boxes.
 
-● All other boxes contain payload and do not contain other boxes.
-
+    
+    
+    
 Maven Dependecy used: Project Reactor
+    
     ```
     <dependency>
            <groupId>io.projectreactor</groupId>
